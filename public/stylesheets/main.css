@@ -1,0 +1,510 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul,
+li{
+    list-style-type: none;
+}
+
+html,body{
+    height: 100%;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    min-height: 100%;
+}
+
+._container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+    /* header styling*/
+
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.header__logo-icon {
+    position: relative;
+    width: 150px;
+}
+
+.header__logo-icon img{
+    width: 100%;
+}
+.header__logo {
+    font-size: 45px;
+
+}
+
+
+.header__body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(16, 92, 206);
+    height: 60px;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.header__icon{
+    display: none;
+}
+
+
+.menu__list {
+    display: flex;  
+
+}
+
+.menu__list > li{
+    font-size: 18px;
+    padding-right: 30px;
+}
+.menu__link {
+    color: #fff;
+    transition: all 0.3s ease 0s;
+
+}
+.menu__link:hover{
+    padding: 3px 0;
+    background: rgb(255, 255, 255);
+    color: rgb(16, 92, 206);
+    border-radius: 3px;
+}
+    
+
+
+.auth__link{
+    padding-left: 15px;
+    font-size: 18px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* calc */
+
+.calc__body {
+    margin: 50px 0;
+    display: flex;
+}
+.calc__navigation {
+    flex: 0 1 50%;
+}
+.calc__menu {
+    padding: 30px;
+}
+
+.calc__list > li{
+    padding-top: 10px;
+}
+.calc__link {
+    font-size: 35px;
+    color: rgb(16, 92, 206);
+}
+.calc__img {
+    flex: 0 1 50%;
+    text-align: center;
+}
+
+ 
+
+/* form */
+/* Всі форми за одним шаблоном */
+
+
+._form {
+    margin: 20px;
+}
+
+
+.form__input{
+    margin: 7px 0;
+    padding: 7px;
+    outline: none;
+    border-radius: 3px;
+    /* width: 100%; */
+    
+}
+
+.form__input-prof{
+    width: 100%;
+}
+
+.form__btn{
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 18px;
+}
+.form__comment{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+/* profile */
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile__form{
+    margin: 30px 0 50px 0; 
+
+}
+
+.profile__btn{
+    margin-top: 5px;
+    width: 100%;
+    height: 30px;
+}
+
+/* personal */
+
+.personal {
+    display: flex;
+    margin: 50px -15px;
+
+}
+.personal__days {
+    flex: 0 1 50%;
+    padding: 0 15px;
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.form__block-pers{
+    display: flex;
+    right: 0;
+    align-items: center;
+}
+
+.form__input-pers {
+    position: relative;
+}
+.input__form-icon{
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgb(16, 92, 206);
+    margin-left: 10px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.input__form-icon::before,
+.input__form-icon::after{
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 70%;
+    background-color: rgb(16, 92, 206);
+    
+}
+
+.input__form-icon::before{
+    transform: rotate(45deg);
+    top: 15%;
+    left: 45%;
+}
+.input__form-icon::after{
+    transform: rotate(-45deg);
+    top: 17%;
+    left: 47%;
+
+}
+
+
+
+.personal__statistic {
+    flex: 0 1 50%;
+    padding: 0 15px;
+    display: flex;
+
+    justify-content: center;
+
+
+}
+
+
+
+/* login */
+.login {
+    max-width: 600px;
+    margin: 50px auto 0;
+    padding: 40px;
+    border: 3px solid #333;
+}
+
+.login__input{
+    width: 60%;
+}
+
+.login__btn {
+    margin-top: 10px;
+}
+
+.signup__link{
+    margin-top: 20px;
+    margin-left: 25px;
+    color: #333;
+}
+
+
+
+
+@media (max-width:768px) {
+    .header__icon{
+        display: block;
+        width: 30px;
+        height: 18px;
+        position: relative;
+        z-index: 5;
+        
+    }
+    .header__icon span,
+    .header__icon::before,
+    .header__icon::after{
+        position: absolute;
+        /* position: relative; */
+        top: 50%;
+        width: 100%;
+        height: 3px;
+        background-color: rgba(255, 255, 255, 0.637);
+        border-radius: 3px;
+        z-index: 5;
+
+    }
+    .header__icon::before,
+    .header__icon::after{
+        content: '';
+    }
+
+    .header__icon::before{
+        top: 0;
+    }
+    .header__icon::after{
+        top: 100%;
+    }
+
+    /*.header__icon._active{
+
+    }*/
+    .header__icon._active span{
+        display: none;
+
+    }
+    .header__icon._active::after{
+        transform: rotate(45deg);
+        top: 43%;
+    }
+    .header__icon._active::before{
+        transform: rotate(-45deg);
+        top: 43%;
+    }
+    /* .menu__list{
+        display: none;
+    } */
+    .menu__body{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -110%;
+        background-color: rgb(16, 92, 206);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.8s ease 0s;
+    }
+    .menu__body._active{
+        left: 0;
+    }
+    .menu__list{
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        height: 100vh;
+    }
+    .menu__list > li{
+        padding: 10px 0;
+    }
+    .menu__link{
+        font-size: 22px;
+    }
+
+    .calc__body{
+        display: block !important;
+
+    }
+    .calc__menu{
+        flex: 0 1 auto;
+    }
+    .calc__img{
+        display: none;
+    }
+    .personal{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .personal__statistic{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 460px) {
+    .header__logo{
+        font-size: 30px;
+        
+    }
+    .header__top{
+        margin: 5px 0;
+    }
+    .header__logo-icon{
+        width: 90px;
+    }
+    .header__body{
+        height: 40px;
+    }
+    .calc__link{
+        font-size: 30px;
+    }
+}
+
+/* 
+.nav-bar{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(16, 92, 206);
+    margin-top: 50px ;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.nav{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-left: 10px;
+
+}
+.nav > a{
+    color:white;
+    text-decoration: none;
+    font-size: 30px;
+} */
+/* .auth{
+   display: flex; 
+   width: 15%;
+   justify-content: space-between;
+   height: 100%;
+   align-items: center;
+   padding-right: 10px;
+}
+.auth > a{
+    color:white;
+    text-decoration: none;
+    font-size: 30px; 
+} */
+
+/* .main-title > a{
+    text-decoration: none;
+    font-size: 70px;
+    color: black;
+   
+}
+.main-title > img{
+    width: 100px;
+    height: 70px;
+}
+.main-title{
+    padding: 10px 0 0 10px ;
+} */
+/* body calc styling*/
+/* .calc-nav{
+    position :relative;
+    top: 200px;
+    width: 100%;
+}
+.calc-nav>ul{
+    margin-left: 150px;; 
+
+}
+
+.calc-nav > img{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    left: 900px;
+    bottom: 400px;
+}
+li{
+    list-style-type:none;
+}
+.calc-nav  ul li a{
+    text-decoration: none;
+    color: rgb(3, 21, 44);
+    font-size: 50px; 
+    
+}
+.calc-nav  ul li a:hover{
+    color: rgb(25, 147, 204);
+} */
+
+
+/*personal-office styling*/
+.image-input{
+    
+    width: 30px;
+    height: 30px;
+
+}
+.per-off{
+    display: flex;
+ justify-content: space-around;
+}
+/*calc-input styling*/
+/* .form-item{
+    padding-left: 20px;
+    font-size: 30px;
+}
+.form-item > input{
+    width: 400px;
+    height: 30px;
+}
+.form-item > button{
+    height: 30px;
+} */
